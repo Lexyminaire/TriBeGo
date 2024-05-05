@@ -92,7 +92,7 @@
 </html>
 
 <script>
-  let idForDelete = null; 
+  // let idForDelete = null; 
 
   function openCreateModal() {
     var createModal = document.getElementById("createModal");
@@ -204,10 +204,10 @@
 
   const deleteForm = document.getElementById("deleteForm")
 
-  let deleteId = null
+  let deletedId = null
   deleteForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    confirmDelete(deleteId)
+    confirmDelete(deletedId)
   })
 
   function openDeleteModal(id) {
@@ -215,6 +215,7 @@
     deleteModal.style.display = "flex";
     
     deletedId = id;
+    console.log(deletedId);
   }
 
 
